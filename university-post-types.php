@@ -2,6 +2,8 @@
 function university_post_types()
 {
     register_post_type("event", array(
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'events'),
         'public' => true,
         'labels' => array(
             'name' => "Events",
@@ -10,7 +12,7 @@ function university_post_types()
             'all_items' => "All Events",
             'singular_name' => "Event"
         ),
-        'menu_icon' => "dashicons-calendar"
+        'menu_icon' => "dashicons-calendar",
     ));
 }
 add_action("init", "university_post_types");
