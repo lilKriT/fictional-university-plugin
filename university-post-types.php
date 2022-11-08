@@ -31,7 +31,7 @@ function university_post_types()
         'menu_icon' => "dashicons-awards",
         'has_archive' => true,
         'rewrite' => array('slug' => 'programs'),
-        'supports' => array('title', 'editor'),
+        'supports' => array('title'),
         'show_in_rest' => true,
     ));
 
