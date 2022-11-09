@@ -16,6 +16,8 @@ function university_post_types()
         'rewrite' => array('slug' => 'events'),
         'supports' => array('title', 'editor', 'excerpt'),
         'show_in_rest' => true,
+        "capability_type" => "event",
+        "map_meta_cap" => true,
     ));
 
     // Programs
@@ -65,6 +67,8 @@ function university_post_types()
         'rewrite' => array('slug' => 'campuses'),
         'supports' => array('title', 'editor', 'excerpt'),
         'show_in_rest' => true,
+        "capability_type" => "campus",
+        "map_meta_cap" => true,
     ));
 }
 add_action("init", "university_post_types");
