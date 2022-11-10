@@ -70,5 +70,21 @@ function university_post_types()
         "capability_type" => "campus",
         "map_meta_cap" => true,
     ));
+
+    // Notes
+    register_post_type("note", array(
+        'public' => false,
+        'show_ui' => true,
+        'labels' => array(
+            'name' => "Notes",
+            'add_new_item' => "Add New Note",
+            'edit_item' => "Edit Note",
+            'all_items' => "All Notes",
+            'singular_name' => "Note"
+        ),
+        'menu_icon' => "dashicons-welcome-write-blog",
+        'supports' => array('title', 'editor'),
+        'show_in_rest' => true,
+    ));
 }
 add_action("init", "university_post_types");
