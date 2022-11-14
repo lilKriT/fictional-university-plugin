@@ -82,6 +82,8 @@ function university_post_types()
             'all_items' => "All Notes",
             'singular_name' => "Note"
         ),
+        'capability_type' => "note",
+        'map_meta_cap' => true,
         'menu_icon' => "dashicons-welcome-write-blog",
         'supports' => array('title', 'editor'),
         'show_in_rest' => true,
