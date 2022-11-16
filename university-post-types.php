@@ -88,5 +88,20 @@ function university_post_types()
         'supports' => array('title', 'editor'),
         'show_in_rest' => true,
     ));
+
+    // Likes
+    register_post_type("like", array(
+        'public' => false,
+        'show_ui' => true,
+        'labels' => array(
+            'name' => "Likes",
+            'add_new_item' => "Add New Like",
+            'edit_item' => "Edit Like",
+            'all_items' => "All Likes",
+            'singular_name' => "Like"
+        ),
+        'menu_icon' => "dashicons-heart",
+        'supports' => array('title'),
+    ));
 }
 add_action("init", "university_post_types");
